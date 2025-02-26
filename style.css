@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+/*header*/
+header  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(.//img/arte_nav.jpg); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    position: relative;
+}
+.titulo_encabezado {
+    position: relative;
+    text-align:left;
+    max-width: 50%;
+    padding: 20px;
+    z-index: 2;
+    
+}
+
+.titulo_encabezado h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+    color: #f3f3f3;   
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;                      
+}
+.titulo_encabezado p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    opacity: 0.8;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(103deg, #13454e,#00a57e,#d0fd5b);/* Chrome 10-25, Safari 5.1-6 */
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;                                            
+}
+
+/*contenido del header */
+ header img{
+    height: 100%;
+    width: 100%;
+} 
+/*Contenido de la imagen en el header  */
+ nav{
+    width: 60%;
+    height: 60px;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background: -webkit-linear-gradient(90deg, #0000ff,#ffff00,#000080);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #0000ff,#ffff00,#000080);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+    border-radius: 10px;
+} 
+/*Caja de barra de navegacion */
+ nav a{
+    padding: 10px;
+    width: 200px;
+    font-family: "Bebas Neue", serif;
+    font-weight:400;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background: rgb(180, 116, 116);
+    border-radius: 10px;
+    justify-content: center;
+    text-align:center;
+    transition: 0.5s;
+    margin: 20px;
+
+} 
+ #primero{
+    background: #FFA500;
+} 
+#primero:hover{
+    background-color: rgb(241, 3, 3);
+    color: black;
+    transform: scale(1.2);
+} 
+
+/*Contenido de la caja de navegacion*/
+nav a:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}  
+body{
+    display:ilane ;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+} 
+/********************************************* *TITULOS Y PREGUNTAS ***************************************************/
+.titulo{
+    position: relative; 
+    width: 500px;
+    height: 200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.texto_m {
+
+    position: relative; 
+    width: 800px;
+    height: 200px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto_m h3{
+    display: flex;
+    width: 200px;
+    position:relative;
+    text-align: center;
+    justify-content: center;
+}
+.texto_m p{
+    display: flex;
+    position:relative;
+    text-align: center;
+    justify-content: center;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    width: 1366;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+}
+/*****************************************************carta*******************************************/
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+.card .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .frontal{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.card .frontal img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .frontal h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+
+}
+.card .trasera{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    
+}
+.card .trasera .link{
+ border-top: solid 1px #f3f3f3;
+ height: 50px;
+ line-height: 50px;
+}
+.card .trasera h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .trasera p{
+    padding-top: 20px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    text-align: justify;
+}
+.card:hover .frontal {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .trasera {
+    transform: perspective(600px) rotateY(360deg);
+}
+/***************************************************Slider*********************************************************/
+.contenedor2{
+    position: relative;
+}
+.contenedor2 .wrapper{
+    width: 60vw;
+    height: 75vh;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0,6);
+    margin: 5rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.contenedor2 .wrapper-holder{
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 30s ease-in-out infinite alternate ;
+}
+.contenedor2 #slider-img-1{
+    background-image: url(img/img1.jpg);
+    background-position: center;
+}
+.contenedor2 #slider-img-2{
+    background-image: url(img/img2.jpg);
+    background-position: center;
+}
+.contenedor2 #slider-img-3{
+    background-image: url(img/img3.jpg);
+    background-position: center;
+}
+.contenedor2 #slider-img-4{
+    background-image: url(img/img4.jpg);
+    background-position: center;
+}
+.contenedor2 .button-holder .button{
+    background-color: rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.contenedor2 .button-holder{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+.button:hover{
+    box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.6);
+}
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}
+/*****************************************FOOTER**************************************/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background: -webkit-linear-gradient(5deg, #0000ff,#ffff00,#000080);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #0000ff,#ffff00,#000080);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    padding: 60px 10%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #000000;
+    height: 2px;
+    width: 200px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 19px;
+}
+
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #040000;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.links img{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    color: white;
+    margin: 0 0 0 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 20%;
+    transition: 0.4s;
+}
+
+.link p{
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.links img:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+
