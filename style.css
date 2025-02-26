@@ -221,6 +221,10 @@ body{
 .card:hover .trasera {
     transform: perspective(600px) rotateY(360deg);
 }
+.link a {
+    text-decoration: none;
+    color: white;
+}
 /***************************************************Slider*********************************************************/
 .contenedor2{
     position: relative;
